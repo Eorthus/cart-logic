@@ -11,8 +11,7 @@ const renderGoodsItem = (title, price) => {
 
 const renderGoodsList = (list) => {
     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-    let box = document.querySelector('.goods-list');
-    box.insertAdjacentHTML = goodsList;
+    document.querySelector('.goods-list').innerHTML = goodsList;
 }
 
 renderGoodsList(goods);
