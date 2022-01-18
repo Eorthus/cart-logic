@@ -16,7 +16,6 @@ const makeGETRequest = (url) => {
         xhr.send();
     });
 };
-
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 
