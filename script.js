@@ -95,8 +95,6 @@ class CartItem extends GoodsItem {
         </li>`
     }
     GetCountItem() {
-
-
     }
     GetTotalSum() {
 
