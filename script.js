@@ -205,7 +205,7 @@ class CartItem extends Item {
                         <p>${this.price} \u20bd</p>
                         <div class="product-quantity"></div>
                         <p class="product-price"></p>
-                        <button class = "buy_btn__del" > Удалить из корзины </button>
+                        <button class = "del-btn" > Удалить из корзины </button>
                 </div>`;
     }
 }
