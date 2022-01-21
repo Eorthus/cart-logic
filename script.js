@@ -17,7 +17,6 @@
     });
 };*/
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
 class List {
     constructor(url, container = ".products", list = ListContent) {
         this.container = container;
