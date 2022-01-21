@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,16 +11,25 @@
 <body class="container">
 
     <header>
+        <div class="cart">
+            <form action="#" class="search-form">
+                <input type="text" class="search-field">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+        </div>
         <button class="btn-cart" type="button">Корзина</button>
-        <div class="cart-block"></div>
+        <div class="cart-block invisible"></div>
     </header>
 
     <main>
-        <div class="goods-list">
 
-        </div>
+        <div class="products"></div>
+
     </main>
-
+    <script src="https://kit.fontawesome.com/d30ea8c077.js" crossorigin="anonymous"></script>
     <script src="script.js"> </script>
 </body>
 
