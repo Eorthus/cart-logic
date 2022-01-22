@@ -9,19 +9,55 @@
 </head>
 
 <body class="container">
+    <div id="app">
+        <header>
+            <div class="cart">
+                <form action="#" class="search-form">
+                    <input type="text" class="search-field" v-model="searchLine">
+                    <button class="btn-search" type="submit" @click.prevent="FilterGood()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
 
-    <header>
-        <button class="btn-cart" type="button">Корзина</button>
-        <div class="cart-block"></div>
-    </header>
+            </div>
+            <button class="btn-cart" type="button" @click.prevent="ShowCart()">Корзина</button>
 
-    <main>
-        <div class="goods-list">
+            <div class="cart-block" v-if="isVisibleCart">
+                <p v-if="!CartProducts.length">Корзина пуста</p>
+                <div class="cart-item" :data-id="product.id_product" v-for="product of CartProducts"
+                    :key="product.id_product">
+                    <h3>{{product.product_name}}</h3>
+                    <img src="http://placehold.it/120x80" alt="">
+                    <p>{{product.price}} Р</p>
+                    <div class="product-quantity">Количество: {{product.quantity}}</div>
+                    <p class="product-price">{{product.quantity * product.price}} Р</p>
+                    <button class="del-btn" @click.prevent="DeleteCart(product)"> Удалить
+                        из корзины </button>
+                </div>
+            </div>
+        </header>
 
-        </div>
-    </main>
+        <main>
+            <div class="products">
+                <div class="product-item" v-for="product of filteredProducts" :key="product.id_product"
+                    :data-id="product.id_product">
+                    <img src="http://placehold.it/120x80" alt="">
+                    <div class="desc">
+                        <h3> {{ product.product_name }} </h3>
+                        <p> {{ product.price }} </p>
+                        <button class="buy-btn" :data-id="product.id_product" :data-name="product.product_name"
+                            :data-price="product.price" @click.prevent="AddCart(product)">Купить</button>
+                    </div>
+                </div>
+            </div>
 
-    <script src="script.js"> </script>
+        </main>
+
+
+    </div>
+    <script src="https://kit.fontawesome.com/d30ea8c077.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
