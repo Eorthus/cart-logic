@@ -13,6 +13,9 @@ display: none;
     margin: 0px 20px;
     background-color: lightgrey;
 }
+.cart-item img{
+    width:100%;
+}
 
 header{   
     display: flex;
