@@ -17,7 +17,6 @@
     });
 };*/
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
 class List {
     constructor(url, container = ".products", list = ListContent) {
         this.container = container;
@@ -194,22 +193,21 @@ class Cart extends List {
     }
 }
 class CartItem extends Item {
-    constructor(product_name, price, id_product, foto = 'http://placehold.it/120x80') {
-        super(product_name, price, id_product)
-        this.foto = foto;
-
+    constructor(el, img = 'https://via.placeholder.com/100x75') {
+        super(el, img);
+        this.quantity = el.quantity;
     }
     render() {
-        return `<div class = "cart-item" data-id = "${this.id_product}">
-                        <h3>${this.product_name}</h3>
-                        <img src = "${this.foto}" alt = "img ${this.id_product}">
-                        <p>${this.price} \u20bd</p>
-                        <div class="product-quantity"></div>
-                        <p class="product-price"></p>
-                        <button class = "buy_btn__del" > Удалить из корзины </button>
-                </div>`;
+        return `<div class="cart-item" data-id="${this.id_product}">
+        <h3 class="product-title">${this.product_name}</h3>
+                <img src="${this.img}" alt="Some image">
+                <p class="product-quantity">Количество: ${this.quantity}</p>
+                <p class="product-price">${this.quantity * this.price} ₽</p>
+                <button class="del-btn" data-id="${this.id_product}">Удалить из корзины</button>
+            </div>`
     }
 }
+
 const ListContent = {
     ProductsList: ProductItem,
     Cart: CartItem

@@ -13,6 +13,9 @@ display: none;
     margin: 0px 20px;
     background-color: lightgrey;
 }
+.cart-item img{
+    width:100%;
+}
 
 header{   
     display: flex;
@@ -69,7 +72,7 @@ header{
     background-color: white;
     padding: 20px;
 }
-.buy_btn__del{
+.del-btn{
     border: none;
     background-color: lightgrey;
     padding: 5px 20px;
