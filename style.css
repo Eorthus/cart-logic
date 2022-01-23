@@ -10,11 +10,15 @@ display: none;
     padding: 13px;
 }
 .search-form{
-    margin: 0px 20px;
+    margin: 6% 20px;
     background-color: lightgrey;
 }
 .cart-item img{
 width:100%;
+}
+.cart-item{
+    padding: 10px 0px;
+    
 }
 
 header{   
@@ -27,12 +31,13 @@ header{
     justify-content: right;
     background-color: white;
     flex-wrap: wrap;
-    position: relative;
 }
 .btn-cart{
     padding: 5px 30px;
     border: none;
     background-color: lightgrey;
+    height:100%;
+    position: relative;
 }
 .products{
     display: flex;
@@ -68,9 +73,9 @@ header{
 }
 .cart-block{
     position: absolute;
-    margin-top: 50px;
     background-color: white;
     padding: 20px;
+    right:0px;
 }
 .del-btn{
     border: none;
